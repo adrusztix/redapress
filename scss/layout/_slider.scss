@@ -1,0 +1,116 @@
+#slider {
+
+	.slide-1 {
+		background-image: url("../images/slider/1.jpg");
+		@include cover;
+		background-repeat: no-repeat;
+		background-position: 33% 50%;
+		position: relative;
+
+		@include desktop {
+			background-position: 50% 50%;
+		}
+	}
+
+	.slide-2 {
+		background-image: url("../images/slider/2.jpg");
+		@include cover;
+		background-repeat: no-repeat;
+		background-position: 33% 50%;
+		position: relative;
+
+		@include desktop {
+			background-position: 50% 50%;
+		}
+	}	
+
+	.slide-3 {
+		background-image: url("../images/slider/3.jpg");
+		@include cover;
+		background-repeat: no-repeat;
+		background-position: 33% 50%;
+		position: relative;
+
+		@include desktop {
+			background-position: 50% 50%;
+		}
+	}	
+
+
+	.overlay {
+
+		&:after {
+			@include dark-overlay(0.35);
+		}		
+	}
+	
+	.slider-content {
+		color: #fff;
+		padding-top: 80px;
+		z-index: 1;
+		position: relative;
+		text-align: left;
+		height: 436px;
+
+		@include tablet {
+			padding-top: 150px;
+			height: 560px;
+		}
+
+		@include fullhd {
+			padding-top: 190px;
+			height: 700px;
+		}
+
+		@include xfullhd {
+			padding-top: 250px;
+			height: 800px;
+		}
+		
+
+		h2 {
+			font-size: 39px;
+			font-weight: 800;
+			text-transform: uppercase;
+			margin: 0 0 20px 0;
+			line-height: 1;
+			@include text-shadow;
+
+			@include minitablet {
+				font-size: 60px;
+			}
+
+			@include tablethor {
+				font-size: 70px;
+			}			
+
+			@include fullhd {
+				font-size: 100px;
+			}			
+		}
+
+		h3 {
+			font-size: 30px;
+			margin: 0 0 20px 0;
+			font-weight: 300;
+			@include text-shadow;
+
+			@include tablet {
+				font-size: 40px;
+				margin-bottom: 30px;
+			}	
+
+			@include tablethor {
+				font-size: 50px;
+			}					
+		}
+
+
+		.btn {
+			display: inline-block;
+			padding: 10px 30px;
+			margin-top: 20px;
+		}			
+
+	}		
+}

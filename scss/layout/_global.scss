@@ -1,0 +1,301 @@
+a {
+	@include basic-transition;
+}
+
+.header {
+	font-family: 'KenyanCoffeeRg-Regular';
+	text-transform: uppercase;
+	color: #000;
+	font-size: 35px;
+	padding-bottom: 10px;
+	position: relative;
+	margin-top: 40px;
+	margin-bottom: 40px;
+
+	&:nth-of-type(1) {
+		margin-top: 0;
+	}
+
+	@include tablet {
+		font-size: 42px;
+	}
+
+
+	&:before {
+		content: "";
+		position: absolute;
+		width: 70px;
+		height: 5px;
+		bottom: 0;
+		left: 0;
+		background: $brand-primary;		
+	}
+}
+
+.middle-btn {
+	text-align: center;
+}
+
+// pages
+
+.content-area-wrapper {
+	@include make-row();
+	margin-top: 40px;
+}
+
+.content-area {
+	@include make-md-column(8);
+}
+
+.widget-area {
+	@include make-md-column(4);
+	margin-top: 60px;
+
+	@include screen {
+		margin-top: 0;
+	}
+}
+
+.content-area-full {
+	@include make-md-column(12);
+}
+
+.content-area, .full-page {
+	p {
+		margin-bottom: 15px;
+	}
+
+	h1,h2,h3,h4 {
+		font-family: 'KenyanCoffeeRg-Regular';
+		color: #000;
+	}
+
+	h5,h6 {
+		font-weight: 600;
+		color: #000;
+	}	
+}
+
+
+// home page
+
+.layout {
+	img {
+		overflow: hidden;
+		object-fit: cover;
+		width: 100%;
+	}	
+}
+
+.layout-1 {
+	position: relative;
+	margin-bottom: 30px;
+
+	.overlay-image {
+		&:after {
+			@include dark-overlay(0.35);
+		}		
+	}
+
+	img {
+		height: 310px;
+	}
+
+	.category-wrapper {
+		position: absolute;
+		top: 30px;
+		left: 30px;
+		font-size: 12px;
+
+		@include tablet {
+			font-size: 14px;
+		}
+
+		.category {
+			float: left;
+			background: rgba(217,0,13,0.5);
+			display: block;
+			color: #fff;
+			padding: 10px 15px;
+
+			&:hover {
+				color: #fff;
+				background: $brand-primary;
+			}
+		}
+
+		.author {
+			float: left;
+			background: rgba(255,255,255,0.5);
+			display: block;
+			color: #fff;
+			padding: 10px 15px;
+
+			&:hover {
+				color: #000;
+				background: #fff;
+			}
+		}
+	}
+
+	.date {
+		position: absolute;
+		top: 80px;
+		left: 30px;
+		color: #fff;
+		font-size: 13px;
+		font-weight: 600;
+
+		@include minitablet {
+			right: 30px;
+			top: 40px;
+			left: auto;
+		}
+
+		@include tablet {
+			font-size: 14px;
+		}
+	}
+
+	.layout-1-inner {
+		position: absolute;
+		bottom: 30px;
+		left: 0px;
+		padding-left: 30px;
+		padding-right: 30px;
+	
+		.title {
+			color: #fff;
+			font-size: 20px;
+			font-weight: 700;
+			line-height: 1.1;
+			margin-bottom: 30px;
+			height: 70px;
+			overflow: hidden;
+			display: block;
+
+			&:hover {
+				text-decoration: underline;
+			}
+
+			@include minitablet {
+				height: auto;
+				overflow: inherit;
+			}			
+
+
+			@include tablet {
+				font-size: 26px;
+				line-height: 1.3;
+			}
+		}	
+
+		.excerpt {
+			font-size: 14px;
+			color: #fff;
+			line-height: 1.3;
+			height: 55px;
+			overflow: hidden;
+
+			@include minitablet {
+				height: auto;
+				overflow: inherit;
+			}
+
+			@include tablet {
+				font-size: 15px;
+				line-height: 1.5;
+			}
+		}		
+	}
+
+}
+
+
+// layouts
+
+.layout-wrapper {
+	@include make-row();
+}
+
+.layout-2 {
+	@include make-sm-column(6);
+	margin-bottom: 40px;
+	overflow: hidden;
+
+	img {
+		height: 250px;
+	}
+}
+
+.layout-3 {
+	@include make-sm-column(6);
+	@include make-md-column(4);
+	margin-bottom: 40px;
+	overflow: hidden;	
+
+	img {
+		height: 250px;
+	}
+}
+
+
+.layout-wrapper {
+	.title {
+		color: #000;
+		font-size: 18px;
+		font-weight: 700;
+		line-height: 1.2;
+		margin-top: 20px;
+		margin-bottom: 15px;
+		display: block;
+
+		&:hover {
+			color: $brand-primary;
+		}
+
+		@include tablet {
+			height: 45px;
+			overflow: hidden;			
+		}
+
+	}
+
+	.excerpt {
+		font-size: 13px;
+		line-height: 1.3;
+		margin-bottom: 15px;
+
+		@include tablet {
+			height: 65px;
+			overflow: hidden;			
+		}
+	}	
+
+	.category-wrapper {
+		font-size: 12px;
+		float: left;
+
+		.category {
+			display: block;
+			margin-bottom: 3px;
+			font-weight: 600;
+		}
+
+		.author {
+			font-style: italic;
+			color: $gray-light;
+
+			&:hover {
+				color: #000;
+			}
+		}
+	}
+
+	.date {
+		float: right;
+		font-weight: 600;
+		font-size: 12px;
+	}
+}
+

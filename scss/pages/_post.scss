@@ -1,0 +1,73 @@
+.post-image-full {
+	overflow: hidden;
+	object-fit: cover;
+	width: 100%;
+	height: 310px;
+
+	@include desktop {
+		height: 450px;
+	}
+}
+
+// blog post
+
+.post-image {
+	overflow: hidden;
+	object-fit: cover;
+	width: 100%;
+	height: 310px;
+}
+
+.post-category-wrapper {
+	font-weight: 600;
+	font-size: 12px;
+	margin-top: 30px;
+
+	@include tablet {
+		font-size: 13px;
+	}
+
+	.date {
+		margin-top: 5px;
+
+		@include minitablet {
+			display: inline-block;
+			margin-top: 0;
+		}
+	}
+
+	span {
+		margin-left: 10px;
+		margin-right: 10px;
+		color: $gray-custom;
+
+		&:nth-of-type(2) {
+			display: none;
+
+			@include minitablet {
+				display: inline-block;
+			}
+		}
+	}
+}
+
+.post-title {
+	font-family: 'KenyanCoffeeRg-Regular';
+	color: #000;
+	font-size: 36px;
+	padding-bottom: 10px;
+	position: relative;
+	margin-top: 30px;
+	margin-bottom: 40px;
+
+	&:before {
+		content: "";
+		position: absolute;
+		width: 70px;
+		height: 5px;
+		bottom: 0;
+		left: 0;
+		background: $brand-primary;		
+	}
+}
+

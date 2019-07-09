@@ -1,0 +1,37 @@
+// ---------------------
+//     GENERAL
+// ---------------------
+
+@import "helpers/variables-custom";
+@import "helpers/resolutions";
+@import "helpers/mixins";
+
+@import "base/bootstrap";
+@import "base/temp";
+
+// ---------------------
+//     COMPONENTS
+// ---------------------
+
+@import "../assets/fonts/kenyan/font.css";
+@import "components/bxslider";
+@import "components/buttons";
+@import "components/breadcrumbs";
+
+// ---------------------
+//     LAYOUT
+// ---------------------
+
+@import "layout/global";
+@import "layout/top";
+@import "layout/slider";
+@import "layout/sidebar";
+@import "layout/footer";
+
+// ---------------------
+//     PAGES
+// ---------------------
+
+@import "pages/front";
+@import "pages/post";
+@import "pages/archive";

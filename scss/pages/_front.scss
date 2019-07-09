@@ -1,0 +1,73 @@
+// parallax
+
+.parallax {
+	background: url("../images/parallax.jpg") no-repeat fixed;
+	@include cover;
+	background-position: 50% 50%;
+	position: relative;
+	margin-top: 70px;
+	margin-bottom: 70px;
+
+	&:after {
+		@include dark-overlay(0.35);
+	}	
+    
+    @media all and (max-width: 1199px) {
+    	background-attachment: scroll;
+    } 	
+
+	.parallax-inner {
+		padding-top: 100px;
+		padding-bottom: 100px;
+		color: #fff;
+		text-align: center;
+		position: relative;
+		z-index: 1;
+
+		@include phone {
+			text-align: left;
+		}
+
+		@include desktop {
+			padding-top: 130px;
+			padding-bottom: 130px;
+		}
+
+		span {
+			font-size: 48px;
+			font-weight: 800;
+			margin: 0 0 20px 0;
+			display: block;
+			text-transform: uppercase;
+			// @include text-shadow;
+
+			@include tablet {
+				font-size: 68px;
+			}
+		}
+
+		p {
+			font-size: 16px;
+			font-weight: 300;
+			margin: 0 0 40px 0;
+			padding: 0;
+			line-height: 1.4;
+			@include text-shadow;
+		
+		}
+
+
+		.btn {
+			display: block;
+			width: 160px;
+			border: 1px solid #fff;
+			margin-right: auto;
+			margin-left: auto;
+
+			@include phone {
+				display: inline-block;
+				margin-left: inherit;
+			}		
+		}		
+	}
+}

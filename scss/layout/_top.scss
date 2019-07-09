@@ -1,0 +1,157 @@
+.top {
+	padding-top: 20px;
+	padding-bottom: 25px;	
+
+	.logo {
+	    background: url("../images/logo.svg") no-repeat;
+	    width: 202px;
+	    height: 81px;
+	    display: block;  
+	    float: left;  
+	}
+
+	.navbar-toggle {
+		margin: 55px 0 0 0;
+		padding: 0;
+
+		.icon-bar {
+			width: 40px;
+			height: 5px;
+			background: $brand-primary;
+		}
+	}	
+
+	.top-right {
+		float: right;
+		margin-top: 25px;
+
+		@include screen {
+			margin-top: 35px;
+		}
+	
+		.search-wrapper {
+			float: right;
+
+			.search-box {
+				border: 1px solid #000;
+				padding: 8px 9px;	
+				overflow: hidden;
+				position: relative;
+				@include clearfix;
+				background: #fff;
+
+				@include screen {
+					margin-top: -10px;
+				}
+
+				input {
+					background: #fff;
+					border: 0;
+					color: #ACACAC;
+				}
+
+				input#search {
+					display: block;
+					float: left;
+					width: -webkit-calc(100% - 35px);
+					width: calc(100% - 35px);
+
+				}
+
+				input::placeholder {
+					color: #ACACAC;
+					padding-left: 5px;
+				}
+
+				.search-btn {
+					display: block;
+					float: right;
+					width: 25px;
+					height: 22px;
+					background: transparent;
+					border: 0;
+
+					&:before {
+						content: "\f002";
+					    font-family: FontAwesome;
+					    right: 15px;
+					    position: absolute;
+					    top: 6px;		
+					    font-size: 18px;	
+					    color: $brand-primary;
+					}
+				}
+			}		
+		}
+
+		.contact-top {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+			float: left;
+
+			li {
+				display: inline-block;
+				font-weight: 600;
+				color: #000;
+				font-size: 16px;
+				margin-right: 30px;
+
+				a {
+					color: #000;
+
+					&:hover {
+						color: $brand-primary;
+					}
+				}
+
+				.fa {
+					color: $brand-primary;
+					font-size: 20px;
+					margin-right: 10px;
+				}
+			}
+		}
+
+
+	}
+
+}
+
+
+// main menu
+
+.navbar {
+	border: none;
+	margin-bottom: 5px;
+	border-bottom: 1px solid #fff;
+
+	@include tablet {
+		background-color: $brand-primary;
+		margin-bottom: 0;
+	}
+
+	.navbar-collapse {
+		padding: 0;
+	}
+}
+
+.navbar-default .navbar-nav > li > a {
+	@include tablet {
+		color: #fff;
+		font-size: 18px;
+		font-weight: 300;
+		text-transform: uppercase;
+		padding-top: 25px;
+		padding-bottom: 25px;
+		border-left: 1px solid $brand-primary;
+		border-right: 1px solid $brand-primary;
+	}
+}
+
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+	@include tablet {
+		border-left: 1px solid #fff;
+		border-right: 1px solid #fff;
+	}
+}

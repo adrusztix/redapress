@@ -1,0 +1,18 @@
+@font-face {
+  font-family: 'KenyanCoffeeRg-Regular';
+  src: url('KenyanCoffeeRg-Regular.svg#KenyanCoffeeRg-Regular') format('svg'),
+       url('KenyanCoffeeRg-Regular.ttf') format('truetype'),
+       url('KenyanCoffeeRg-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'kenyan coffee rg';
+  src: url('kenyan coffee rg.eot');
+  src: url('kenyan coffee rg.eot?#iefix') format('embedded-opentype'),
+       url('kenyan coffee rg.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
